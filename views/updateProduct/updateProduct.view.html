@@ -1,0 +1,62 @@
+
+<div class="" style="background-image:url('./public/images/search.jpg');width:100%;height:970px;background-repeat:no-repeat;background-size:cover">
+	<div class=" container">
+		<div class="row" style="padding-top:5%;margin-right:0px!important">
+			
+			<div class="col-lg-6" align="left" style="padding-bottom:20px">
+				<a href="#/home" class="btn btn-primary" style="width:180px">Back to Home</a>
+			</div>
+			<div class="col-lg-6" align="right" style="padding-bottom:20px">
+				<a href="#/login" class="btn btn-danger" style="width:180px">Logout</a>
+			</div>
+			<div class="" style="margin-top:6%;background:#fff;opacity:0.9;padding:10px" align="center">
+				<p style="text-align:center;font-size:30px;font-weight:700;background:#fff;opacity:0.9;padding:20px">EDIT PRODUCT</p>
+				<table class="table" align="" cellpadding="5px" cellspacing="5px" style="margin-bottom:0px!important;width:75%">
+					<tr id="updatep">
+						<td>Select Product</td>
+						<td>
+							<select class="form-control"  ng-change="populateData(update.pName)" ng-model="update.pName" ng-options="o.pName for o in options | orderBy:'pName'" name="Product name"  required="" >
+								<option selected disabled>Choose here</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Product ID</td>
+						<td><input class="form-control" type="text" placeholder="Product ID" ng-model="update.pID" disabled></td>
+					</tr>
+					
+					<tr>
+						<td>Company Name</td>
+						<td><input class="form-control" type="text" placeholder="Product Company" ng-model="update.pCompany"></td>
+					</tr>
+					<tr>
+						<td>Product Description</td>	
+						<td><input class="form-control" type="text" placeholder="Product Description" ng-model="update.pDesc"></td>
+					</tr>
+					<tr>
+						<td>Product Category</td>	
+						<td><input class="form-control" type="text" placeholder="Product Category" ng-model="update.pCat"></td>
+					</tr>
+					<tr>
+						<td>Product Unit Cost</td>
+						<td><input class="form-control" type="number" placeholder="Product Cost" ng-model="update.pCost"></td>
+					</tr>
+					<tr>	
+						<td>Product Tax</td>
+						<td><input class="form-control" type="number" placeholder="Product Tax" ng-model="update.pTax"></td>
+					</tr>
+					<tr>	
+						<td>Product Stock</td>
+						<td><input class="form-control" type="number" placeholder="Product Stock" ng-model="update.pStock"></td>
+					</tr>
+					<tr>
+							
+						<td align="center"><button class="btn btn-warning" ng-click="updateProduct(update.pName)" style="width:180px;margin-top:20px">Update the Product</button></td>
+						<td align="center"><button class="btn btn-danger" ng-click="removeProduct(update.pName)" style="width:180px;margin-top:20px">Delete the Product</button></td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

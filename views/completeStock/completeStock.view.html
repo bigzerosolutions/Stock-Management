@@ -1,0 +1,75 @@
+
+<div class="" style="background-image:url('./public/images/search.jpg');width:100%;height:970px;background-repeat:no-repeat;background-size:cover">
+	<div class=" container">
+		<div class="row" style="padding-top:5%;margin-right:0px!important">
+			
+			<div class="col-lg-6" align="left" style="padding-bottom:20px">
+				<a href="#/home" class="btn btn-primary" style="width:180px">Back to Home</a>
+			</div>
+			<div class="col-lg-6" align="right" style="padding-bottom:20px">
+				<a href="#/login" class="btn btn-danger" style="width:180px">Logout</a>
+			</div>
+			<div align="center" style="margin-top:6%;background:#fff;opacity:0.9;padding:10px">
+				<table class="table" style="width:75%">
+					<tr>
+						<td align="center">Search Product</td>
+						<td align="center"><input class="form-control" type="text" placeholder="Product Name" ng-model="search.pName" style="width:75%;"></td>
+						<td align="center">
+							<button id="searchClick" class="btn btn-primary" ng-click="searchProduct(search.pName)" style="width:180px;">Search</button>
+						</td>
+					</tr>
+				</table>
+				<table class="table" ng-hide="{{status}}">
+					<tr>
+						<td>Searched Product Name :</td>
+						<td></td>
+						<td>Company Name :</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>Product Category :</td>
+						<td></td>
+						<td>Product Cost</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Product Stock Available :</td>
+						<td></td>
+						<td>Product Description</td>
+						<td></td>
+					</tr>
+				</table>
+				<p style="text-align:center;font-size:30px;font-weight:700;background:#fff;opacity:0.9;padding:20px">ALL PRODUCTS</p>
+				<div>
+				<table class="table" align="" cellpadding="5px" cellspacing="5px" style="margin-bottom:0px!important">
+					<tr>
+						<th style="padding:5px;border:1px solid" width="170"> Product Name </th>
+						<th style="padding:5px;border:1px solid" width="216"> Product Company </th>
+						<th style="padding:5px;border:1px solid" width="228"> Product Category </th>
+						<th style="padding:5px;border:1px solid" width="228"> Product Description </th>
+						<th style="padding:5px;border:1px solid" width="155"> Product Cost </th>
+						<th style="padding:5px;border:1px solid" width="143"> Product Tax </th>
+						<th style="padding:5px;border:1px solid" width="168"> Product Stock </th>
+					</tr>
+				</table>
+				</div>
+				<div style="overflow-y: auto;max-height: 500px;">
+				<table class="table" align="" cellpadding="5px" cellspacing="5px" style="background:#F1F1F1">
+									
+					<tr ng-repeat="d in details | orderBy:'pName'">
+						<td style="padding:5px;border:1px solid" width="164">{{d.pName.S}}</td>
+						<td style="padding:5px;border:1px solid" width="206">{{d.pCompany.S}}</td>
+						<td style="padding:5px;border:1px solid" width="228">{{d.pCategory.S}}</td>
+						<td style="padding:5px;border:1px solid" width="228">{{d.pDesc.S}}</td>
+						<td style="padding:5px;border:1px solid" width="155">{{d.pCost.S}}</td>
+						<td style="padding:5px;border:1px solid" width="143">{{d.pTax.S}}</td>
+						<td style="padding:5px;border:1px solid" width="168">{{d.pStock.S}}</td>
+					</tr>
+				</table>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</div>
