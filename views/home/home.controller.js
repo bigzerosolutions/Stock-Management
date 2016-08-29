@@ -15,9 +15,9 @@
         vm.allProducts = allProducts;
         vm.allInvoices = allInvoices;
         vm.settings = settings;
-        vm.username = $rootScope.globals.currentUser.stock;
+        vm.username = $rootScope.globals.currentUser.username;
         //$rootScope.globals.currentUser.username = "test";
-        console.log($rootScope.globals.currentUser.stock);
+        //console.log($rootScope.globals.currentUser.stock);
         if(vm.username == "admin")
         {
             $rootScope.divEnabled = false;
